@@ -9,12 +9,20 @@
         <header class="gh-article-header gh-canvas">
             <span class="gh-article-meta"{{#if primary_tag.accent_color}} style="--tag-color: {{primary_tag.accent_color}};"{{/if}}>
                 By {{authors}}
+                
                 {{#if primary_tag}}
                     in
                     <a class="gh-article-tag" href="{{primary_tag.url}}">{{primary_tag.name}}</a>
                 {{/if}}
                 —
                 <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMM YYYY"}}</time>
+
+                <span>
+                    <span class="bull">&bull;</span>
+                     <a href="#disqus_thread">comments</a>
+                </span>
+                
+               
             </span>
 
             <h1 class="gh-article-title">{{title}}</h1>
@@ -34,11 +42,19 @@
 
     {{> "post-navigation"}}
 
-    {{#if comments}}
-        <div class="gh-comments gh-canvas">
-            {{comments}}
-        </div>
-    {{/if}}
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            this.page.url = "{{url absolute="true"}}";
+            this.page.identifier = "ghost-{{comment_id}}"
+        };
+        (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://do-not-do-that.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+        })();
+    </script>
 
     {{/post}}
 

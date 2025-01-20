@@ -12,3 +12,9 @@
 @import "blog/comment.css";
 @import "blog/related.css";
 @import "misc/utilities.css";
+
+#disqus_thread {
+  margin-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 2rem;
+}
