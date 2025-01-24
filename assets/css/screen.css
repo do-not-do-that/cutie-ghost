@@ -14,7 +14,7 @@
 @import "misc/utilities.css";
 
 #disqus_thread {
-  margin-top: 2rem;
-  border-top: 1px solid #e0e0e0;
-  padding-top: 2rem;
+  max-width: 800px; /* 본문 너비에 맞게 조정 */
+  margin: 0 auto; /* 가운데 정렬 */
+  padding: 0 15px; /* 여백 추가 */
 }

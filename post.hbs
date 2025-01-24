@@ -36,25 +36,27 @@
 
         <div class="gh-content gh-canvas">
             {{content}}
+
+             <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = "{{url absolute="true"}}";
+                        this.page.identifier = "ghost-{{comment_id}}"
+                    };
+                    (function() {
+                    var d = document, s = d.createElement('script');
+                    s.src = 'https://do-not-do-that.disqus.com/embed.js';
+                    s.setAttribute('data-timestamp', +new Date());
+                    (d.head || d.body).appendChild(s);
+                    })();
+                </script>
         </div>
 
     </article>
 
     {{> "post-navigation"}}
 
-    <div id="disqus_thread"></div>
-    <script>
-        var disqus_config = function () {
-            this.page.url = "{{url absolute="true"}}";
-            this.page.identifier = "ghost-{{comment_id}}"
-        };
-        (function() {
-        var d = document, s = d.createElement('script');
-        s.src = 'https://do-not-do-that.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-        })();
-    </script>
+   
 
     {{/post}}
 
