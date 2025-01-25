@@ -62,6 +62,13 @@
         </div>
     </header>
 
+    {{!-- 메인 페이지에서만 배너 표시 --}}
+    {{#is "home"}}
+        <div class="custom-banner">
+            <img src="{{asset "images/유령배너_v2.png"}}" alt="Banner">
+        </div>
+    {{/is}}
+
     <div class="site-content">
         {{{body}}}
     </div>

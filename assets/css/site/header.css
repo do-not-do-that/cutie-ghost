@@ -1,15 +1,42 @@
+/* .gh-head {
+  background-color: transparent;
+} */
 .gh-head {
-    background-color: transparent;
+  background-color: #f4f4f4; /* 화이트 배경 */
+  color: #000000; /* 검정 텍스트 */
+  padding: 15px 20px; /* 헤더 내부 여백 */
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .gh-head-menu,
 .gh-head-actions {
-    font-size: 1.2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.005em;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.005em;
 }
 
 .gh-head-btn {
-    --multiplier: 1.3;
+  --multiplier: 1.3;
+}
+
+.custom-banner {
+  display: flex;
+  justify-content: center; /* 배너 중앙 정렬 */
+  align-items: center; /* 수직 정렬 */
+  background-color: #f4f4f4; /* 배너 배경색 */
+  border-radius: 10px; /* 모서리 둥글게 */
+  margin: 0 auto; /* 상하좌우 중앙 배치 */
+  width: 100%; /* 본문과 비슷한 너비로 제한 */
+  max-width: 1200px; /* 최대 너비 설정 */
+  height: auto; /* 비율 유지 */
+  overflow: hidden; /* 초과된 내용 숨김 */
+}
+
+.custom-banner img {
+  width: 100%; /* 배너 크기에 맞게 이미지 크기 조정 */
+  height: auto; /* 비율 유지 */
+  border-radius: 10px; /* 이미지 둥근 모서리 */
 }
