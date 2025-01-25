@@ -1,0 +1,90 @@
+{{!< default}}
+
+<div class="tech-page">
+  <h1>TECH Categories</h1>
+
+  <div class="tech-categories">
+    {{! Database Section }}
+    <div class="tech-category">
+      <a href="/tag/database/">
+        <h2>Database</h2>
+        <p>Explore articles about databases and their management.</p>
+      </a>
+      <ul class="post-list">
+        {{#get "posts" filter="tag:database" limit="5" as |posts|}}
+          {{#foreach posts}}
+            <li>
+              <a href="{{url}}">{{title}}</a>
+              <time datetime="{{date format="YYYY-MM-DD"}}">{{date
+                  format="MMMM DD, YYYY"
+                }}</time>
+            </li>
+          {{/foreach}}
+        {{else}}
+          <li>No posts available in this category.</li>
+        {{/get}}
+      </ul>
+    </div>
+
+    {{! Infra Section }}
+    <div class="tech-category">
+      <a href="/tag/infra/">
+        <h2>Infrastructure</h2>
+        <p>Learn about cloud infrastructure, servers, and scaling.</p>
+      </a>
+      <ul class="post-list">
+        {{#get "posts" filter="tag:infra" limit="5" as |posts|}}
+          {{#foreach posts}}
+            <li>
+              <a href="{{url}}">{{title}}</a>
+              <time datetime="{{date format="YYYY-MM-DD"}}">{{date
+                  format="MMMM DD, YYYY"
+                }}</time>
+            </li>
+          {{/foreach}}
+        {{else}}
+          <li>No posts available in this category.</li>
+        {{/get}}
+      </ul>
+    </div>
+
+    {{! Backend Section }}
+    <div class="tech-category">
+      <a href="/tag/backend/">
+        <h2>Backend Development</h2>
+        <p>Dive into backend technologies like NestJS, APIs, and more.</p>
+      </a>
+      <ul class="post-list">
+        {{#get "posts" filter="tag:backend" limit="5" as |posts|}}
+          {{#foreach posts}}
+            <li>
+              <a href="{{url}}">{{title}}</a>
+              <time datetime="{{date format="YYYY-MM-DD"}}">{{date
+                  format="MMMM DD, YYYY"
+                }}</time>
+            </li>
+          {{/foreach}}
+        {{else}}
+          <li>No posts available in this category.</li>
+        {{/get}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  .tech-page { padding: 2rem; text-align: center; } .tech-categories { display:
+  flex; justify-content: space-around; margin-top: 2rem; gap: 2rem; }
+  .tech-category { flex: 1; margin: 0 1rem; padding: 1rem; border: 1px solid
+  #e0e0e0; border-radius: 8px; background-color: #f9f9f9; transition: all 0.3s
+  ease; text-align: left; } .tech-category:hover { background-color: #f0f0f0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); } .tech-category a {
+  text-decoration: none; color: inherit; } .tech-category h2 { font-size:
+  1.5rem; margin-bottom: 1rem; } .tech-category p { color: #555; font-size:
+  1rem; margin-bottom: 1rem; } .post-list { list-style: none; padding: 0;
+  margin: 0; } .post-list li { margin-bottom: 0.5rem; font-size: 0.9rem; }
+  .post-list li a { text-decoration: none; font-weight: bold; color:
+  var(--primary-color, #007acc); } .post-list li a:hover { text-decoration:
+  underline; } .post-list li time { display: block; font-size: 0.8rem; color:
+  #999; margin-top: 0.3rem; }
+</style>

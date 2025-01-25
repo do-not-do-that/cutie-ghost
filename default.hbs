@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
     <link rel="stylesheet" href="{{asset "built/screen.css"}}">
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.css">
     <style>
         .gh-content {
@@ -129,6 +128,7 @@
     {{> "pswp"}}
 {{/is}}
 
+<script src="{{asset "built/main.min.js"}}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.12.3/tocbot.min.js"></script>
 
 {{! Initialize Tocbot after you load the script }}
@@ -144,7 +144,6 @@
         hasInnerContainers: true,
     });
 </script>
-
 {{ghost_foot}}
 <script id="dsq-count-scr" src="//do-not-do-that.disqus.com/count.js" async></script>
 
