@@ -17,3 +17,7 @@
   max-width: 800px; /* 본문 너비에 맞게 조정 */
   padding: 0 15px; /* 여백 추가 */
 }
+
+.gh-foot {
+  background-color: #f4f4f4;
+}
